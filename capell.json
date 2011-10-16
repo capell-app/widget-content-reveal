@@ -5,7 +5,7 @@
     "displayName": "Content Reveal Widget",
     "kind": "package",
     "capellApiVersion": "^1.0",
-    "version": "1.x-dev",
+    "version": "1.0.0",
     "description": "Teaser cards reveal registered widget snapshots through accessible overlays, inline regions, or replacement regions.",
     "product": {
         "group": "Capell Foundation",
