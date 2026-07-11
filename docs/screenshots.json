@@ -1,0 +1,39 @@
+{
+    "package": "widget-content-reveal",
+    "composerName": "capell-app/widget-content-reveal",
+    "generatedFor": "deployment-screenshot-runner",
+    "requiresInstalledPackage": true,
+    "composerRequires": [
+        "capell-app/widget-content-reveal",
+        "capell-app/layout-builder"
+    ],
+    "outputDirectory": "packages/widget-content-reveal/docs/screenshots",
+    "auditStatus": "fixture-needed",
+    "auditReason": "The package is release-ready with honest interim Marketplace artwork; deterministic Layout Builder and public-page fixtures still need capture.",
+    "entries": [
+        {
+            "id": "content-reveal-layout-builder-editor",
+            "title": "Content Reveal fields in Layout Builder.",
+            "package": "widget-content-reveal",
+            "surface": "admin",
+            "targetType": "admin-surface",
+            "target": "Layout Builder page editor",
+            "required": false,
+            "notes": "Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Capture the editor state before the page is published.",
+            "useCase": "An editor can see the fields used to configure the Content Reveal widget.",
+            "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-layout-builder-editor.png"
+        },
+        {
+            "id": "content-reveal-public-output",
+            "title": "Content Reveal public output.",
+            "package": "widget-content-reveal",
+            "surface": "frontend",
+            "targetType": "artifact",
+            "target": "Seeded public page fixture",
+            "required": false,
+            "notes": "Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
+            "useCase": "A visitor explores optional detail without leaving the page or exposing internal target identifiers.",
+            "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-public-output.png"
+        }
+    ]
+}
