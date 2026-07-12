@@ -36,7 +36,8 @@
     "contributes": [
         {
             "type": "content-widget",
-            "class": "Capell\\WidgetContentReveal\\WidgetContentRevealContribution"
+            "class": "Capell\\WidgetContentReveal\\WidgetContentRevealContribution",
+            "key": "capell-app.widget-content-reveal"
         }
     ],
     "database": {
