@@ -4,7 +4,7 @@
     "slug": "widget-content-reveal",
     "displayName": "Content Reveal Widget",
     "kind": "package",
-    "capellApiVersion": "^4.0",
+    "capellApiVersion": "^0.0",
     "version": "0.0.x-dev",
     "description": "Teaser cards reveal registered widget snapshots through accessible overlays, inline regions, or replacement regions.",
     "product": {
