@@ -1,0 +1,35 @@
+{
+    "whatThisPluginAdds": {
+        "text": "Content Reveal adds a Layout Builder widget that presents teaser cards and reveals registered widget snapshots in modal, slideover, inline, or replacement modes. Reveal targets stay within the widget registry.",
+        "evidence": [
+            "src/Filament/ContentRevealWidget.php",
+            "resources/views/widget.blade.php",
+            "tests/Feature/WidgetContentRevealTest.php"
+        ]
+    },
+    "surfaceOutcome": {
+        "text": "Editors connect a teaser to another registered widget, and visitors can reveal that content without leaving the current public page.",
+        "evidence": [
+            "capell.json",
+            "resources/views/widget.blade.php",
+            "tests/Feature/WidgetContentRevealTest.php"
+        ]
+    },
+    "whyItMatters": {
+        "developers": {
+            "text": "The extension declares interaction support and a widget target capability through a typed definition rather than accepting arbitrary render targets.",
+            "evidence": [
+                "src/Providers/WidgetContentRevealServiceProvider.php",
+                "src/Filament/ContentRevealWidget.php",
+                "tests/Feature/WidgetContentRevealTest.php"
+            ]
+        },
+        "teams": {
+            "text": "Teams can keep supporting material available on demand while preserving a concise first view of the page.",
+            "evidence": [
+                "resources/views/widget.blade.php",
+                "tests/Feature/WidgetContentRevealTest.php"
+            ]
+        }
+    }
+}
