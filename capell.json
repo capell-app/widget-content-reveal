@@ -96,7 +96,7 @@
         "adminQueryBudget": 0,
         "cacheTags": ["widget-content-reveal"],
         "cacheSafety": {
-            "cacheable": true,
+            "cacheable": false,
             "variesBy": ["site", "locale", "theme"],
             "sensitiveOutput": false,
             "invalidationSources": [
