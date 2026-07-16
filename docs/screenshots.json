@@ -34,6 +34,11 @@
             "required": false,
             "notes": "Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Capture the editor state before the page is published.",
             "useCase": "An editor can see the fields used to configure the Content Reveal widget.",
+            "url": "/screenshot-fixtures/widgets/content-reveal/editor",
+            "waitFor": "[data-widget-screenshot-fixture=\"editor\"]",
+            "colorSchemes": [
+                "light"
+            ],
             "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-layout-builder-editor.png"
         },
         {
@@ -46,6 +51,11 @@
             "required": false,
             "notes": "Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
             "useCase": "A visitor explores optional detail without leaving the page or exposing internal target identifiers.",
+            "url": "/screenshot-fixtures/widgets/content-reveal/public",
+            "waitFor": "[data-widget-screenshot-fixture=\"public\"]",
+            "colorSchemes": [
+                "light"
+            ],
             "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-public-output.png"
         }
     ]

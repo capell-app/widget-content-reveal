@@ -35,6 +35,8 @@ Screenshot contract: `docs/screenshots.json`.
 
 ![Content Reveal Widget extension card](docs/screenshots/extension-card.svg)
 
+![Content Reveal fields in Layout Builder](docs/screenshots/content-reveal-layout-builder-editor.png)
+
 - Content Reveal Widget extension card (marketplace, required).
 - Content Reveal fields in Layout Builder (admin, optional).
 - Content Reveal public output (frontend, optional).

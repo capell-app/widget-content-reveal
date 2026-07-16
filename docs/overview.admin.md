@@ -4,16 +4,17 @@ Content Reveal lets editors introduce deeper content with up to 12 teaser cards.
 
 ## Do I need to do anything?
 
-Add the widget to a page in Layout Builder, complete its fields, and preview the public page before publishing.
+Add **Content Reveal** in Layout Builder and enter its heading. Add one to 12 ordered teaser cards; each card needs a title, teaser, button label, and the UUID of its target widget instance. Choose how the target should open: **Modal**, **Slide-over**, **Inline reveal**, or **Replace region**. Preview the public page before publishing.
 
 ## Where it shows up
 
-In Layout Builder, as a Content Reveal widget that selects registered reveal targets and presentation behaviour. Public teaser links remain usable without JavaScript.
+Editors configure it as a Layout Builder widget that selects target widget instances and a presentation behaviour for each card. On the public page, a resolved card is a regular link as well as an enhanced interaction. If its target is not present in the rendered page, the card keeps its teaser and button label but cannot open the target.
 
 ## Good to know
 
 - This free beta extension belongs to Capell Foundation and requires Layout Builder.
-- Target identities become encrypted snapshot locators; raw model identifiers are not emitted in public markup.
+- Target UUIDs are authoring data. A resolvable target becomes an interaction locator in public markup; raw model identifiers are not emitted.
+- Modal interactions support backdrop dismissal and expose loading, ready, error, retry, and standalone-fallback status text to assistive technology.
 
 ## Screenshot status
 
