@@ -56,19 +56,13 @@
     "permissions": [],
     "capabilities": ["frontend.public-static", "frontend.interactive"],
     "security": {
-        "riskTier": "medium",
+        "riskTier": "low",
         "publicSurface": {
-            "routeNames": [
-                "capell.widgets.snapshot.html",
-                "capell.widgets.snapshot.json"
-            ],
+            "routeNames": [],
             "auth": "none",
             "csrfExemptRoutes": [],
             "signedRoutes": [],
-            "tokenizedRoutes": [
-                "capell.widgets.snapshot.html",
-                "capell.widgets.snapshot.json"
-            ],
+            "tokenizedRoutes": [],
             "webhookRoutes": [],
             "throttledRoutes": []
         },
@@ -89,7 +83,10 @@
             "requiresSecretRedaction": false,
             "clients": []
         },
-        "adminSurface": { "authorization": "panel-auth", "permissions": [] }
+        "adminSurface": {
+            "authorization": "panel-auth",
+            "permissions": []
+        }
     },
     "performance": {
         "frontendRenderBudgetMs": 10,
