@@ -13,6 +13,7 @@
     "entries": [
         {
             "id": "widget-content-reveal-extension-card",
+            "colorSchemes": ["light"],
             "title": "Content Reveal Widget extension card.",
             "package": "widget-content-reveal",
             "surface": "marketplace",
@@ -41,18 +42,18 @@
         },
         {
             "id": "content-reveal-public-output",
-            "title": "Content Reveal public output.",
+            "title": "Illustrative content reveal public output preview.",
             "package": "widget-content-reveal",
             "surface": "frontend",
-            "targetType": "artifact",
-            "target": "Seeded public page fixture",
-            "required": false,
-            "notes": "Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
+            "targetType": "frontend-url",
+            "target": "/screenshot-fixtures/catalogue/widget-content-reveal/content-reveal-public-output",
+            "required": true,
+            "notes": "Illustrative deterministic catalogue fixture, not a live package UI capture. Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
             "useCase": "A visitor explores optional detail without leaving the page or exposing internal target identifiers.",
-            "url": "/screenshot-fixtures/widgets/content-reveal/public",
-            "waitFor": "[data-widget-screenshot-fixture=\"public\"]",
-            "colorSchemes": ["light"],
-            "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-public-output.png"
+            "url": "/screenshot-fixtures/catalogue/widget-content-reveal/content-reveal-public-output",
+            "colorSchemes": ["light", "dark"],
+            "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-public-output.png",
+            "fixtureKind": "illustrative-catalogue"
         }
     ]
 }
