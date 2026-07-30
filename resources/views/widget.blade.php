@@ -1,9 +1,9 @@
-@php /** @var \Capell\WidgetContentReveal\Data\ContentRevealRenderData $renderData */ $pageData=$publicPageRenderData??null; @endphp
+@php /** @var \Capell\WidgetContentReveal\Data\ContentRevealRenderData $renderData */ $pageData = $publicPageRenderData ?? null; @endphp
 <section class="capell-content-reveal">
     <h2>{{ $renderData->heading }}</h2>
     <div class="capell-content-reveal__grid">
         @foreach ($renderData->cards as $card)
-            @php $locator=$pageData?->widgetInteractionLocator($card->targetInstanceId); @endphp
+            @php $locator = $pageData?->widgetInteractionLocator($card->targetInstanceId); @endphp
             <article>
                 <h3>{{ $card->title }}</h3>
                 <p>{{ $card->teaser }}</p>
