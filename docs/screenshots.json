@@ -54,6 +54,27 @@
             "colorSchemes": ["light", "dark"],
             "screenshotPath": "packages/widget-content-reveal/docs/screenshots/content-reveal-public-output.png",
             "fixtureKind": "illustrative-catalogue"
+        },
+        {
+            "id": "widget-content-reveal-admin-sidebar-menu-open",
+            "title": "Content Reveal fields in Layout Builder with admin sidebar menu open.",
+            "package": "widget-content-reveal",
+            "surface": "admin",
+            "targetType": "admin-surface",
+            "target": "Layout Builder page editor",
+            "required": false,
+            "notes": "Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. Capture the editor state before the page is published. Capture this same admin surface with the fully collapsible sidebar opened.",
+            "useCase": "An editor can see the fields used to configure the Content Reveal widget.",
+            "url": "/screenshot-fixtures/widgets/content-reveal/editor",
+            "waitFor": "[data-widget-screenshot-fixture=\"editor\"]",
+            "colorSchemes": ["light"],
+            "screenshotPath": "packages/widget-content-reveal/docs/screenshots/widget-content-reveal-admin-sidebar-menu-open.png",
+            "beforeWait": [
+                {
+                    "type": "click",
+                    "selector": ".fi-topbar-open-collapse-sidebar-btn"
+                }
+            ]
         }
     ]
 }
