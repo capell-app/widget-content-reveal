@@ -10,8 +10,6 @@ Content Reveal adds a Layout Builder widget that presents teaser cards and revea
 
 Editors connect a teaser to another registered widget, and visitors can reveal that content without leaving the current public page.
 
-Evidence: [`src/Filament/ContentRevealWidget.php`](src/Filament/ContentRevealWidget.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php), [`tests/Feature/WidgetContentRevealTest.php`](tests/Feature/WidgetContentRevealTest.php), [`capell.json`](capell.json).
-
 Status details:
 
 - Status: Available
@@ -27,19 +25,17 @@ Status details:
 
 **For teams:** Teams can keep supporting material available on demand while preserving a concise first view of the page.
 
-Evidence: [`src/Providers/WidgetContentRevealServiceProvider.php`](src/Providers/WidgetContentRevealServiceProvider.php), [`src/Filament/ContentRevealWidget.php`](src/Filament/ContentRevealWidget.php), [`tests/Feature/WidgetContentRevealTest.php`](tests/Feature/WidgetContentRevealTest.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php).
-
 ## Screens And Workflow
 
 Screenshot contract: `docs/screenshots.json`.
 
 ![Content Reveal Widget extension card](docs/screenshots/extension-card.svg)
 
-![Illustrative content reveal public output preview](docs/screenshots/content-reveal-public-output.png)
+![Content Reveal public output](docs/screenshots/content-reveal-public-output.png)
 
 - Content Reveal Widget extension card (marketplace, required evidence).
 - Content Reveal fields in Layout Builder (admin, supplementary evidence).
-- Illustrative content reveal public output preview (frontend, required evidence).
+- Content Reveal public output (frontend, required evidence).
 - Content Reveal fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
 
 ## Technical Shape
@@ -109,7 +105,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-content-reveal`.
-2. Open `/screenshot-fixtures/catalogue/widget-content-reveal/content-reveal-public-output` and confirm the public output renders without admin state.
+2. Open the package detail or install-intent surface and confirm the Content Reveal Widget extension card is present.
 
 ## Next Steps
 
@@ -122,6 +118,5 @@ This package has no schema impact. It extends Capell through `content-widget` co
 - [Capell documentation design system](../../docs/DESIGN_SYSTEM.md)
 - [Capell and package ERD notes](../../docs/erd/capell-and-package-erds.md)
 - Related packages: [Layout Builder](../layout-builder/README.md).
-- Focused tests: `vendor/bin/pest packages/widget-content-reveal/tests --configuration=phpunit.xml`.
 
 <!-- prettier-ignore-end -->
