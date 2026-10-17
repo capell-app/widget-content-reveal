@@ -1,5 +1,5 @@
 .capell-content-reveal {
-    color: var(--theme-text, #172033);
+    color: inherit;
 }
 .capell-content-reveal__grid {
     display: grid;
@@ -7,6 +7,7 @@
     gap: 1rem;
 }
 .capell-content-reveal article {
+    color: var(--theme-foreground, currentColor);
     padding: 1.25rem;
     border: 1px solid var(--theme-border, #cbd5e1);
     border-radius: var(--theme-radius, 0.75rem);
@@ -27,4 +28,16 @@
     height: 1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+}
+
+/* Brand surfaces stay light; Foundation typography switches at the dark root. */
+.dark .capell-content-reveal article {
+    color: var(--foundation-body-fg, var(--theme-foreground, currentColor));
+    background: var(--foundation-card-bg, var(--theme-surface, #fff));
+    border-color: var(--foundation-border, var(--theme-border, #cbd5e1));
+}
+
+.dark .capell-content-reveal a {
+    background: var(--foundation-primary-action, var(--theme-primary, #1d4ed8));
+    color: var(--foundation-page-bg, var(--theme-on-primary, #fff));
 }

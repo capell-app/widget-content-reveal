@@ -29,11 +29,11 @@ Status details:
 
 Screenshot contract: `docs/screenshots.json`.
 
-![Content Reveal Widget extension card](docs/screenshots/extension-card.svg)
-
 ![Content Reveal public output](docs/screenshots/content-reveal-public-output.png)
 
-- Content Reveal Widget extension card (marketplace, required evidence).
+![Content Reveal fields in Layout Builder](docs/screenshots/content-reveal-layout-builder-editor.png)
+
+- Content Reveal Widget extension card (marketplace, supplementary documentation fixture).
 - Content Reveal fields in Layout Builder (admin, supplementary evidence).
 - Content Reveal public output (frontend, required evidence).
 - Content Reveal fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
@@ -56,6 +56,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ### Manifest contributions
 
+- `asset: Capell\WidgetContentReveal\WidgetContentRevealContribution`
 - `content-widget: Capell\WidgetContentReveal\WidgetContentRevealContribution`
 
 ### Health checks
@@ -73,7 +74,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ## Data Model
 
-This package has no schema impact. It extends Capell through `content-widget` contributions instead of declaring package-owned tables.
+This package has no schema impact. It extends Capell through `asset` contributions and `content-widget` contributions instead of declaring package-owned tables.
 
 ## Install Impact
 
@@ -105,7 +106,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-content-reveal`.
-2. Open the package detail or install-intent surface and confirm the Content Reveal Widget extension card is present.
+2. Open a host admin workflow that uses the package extension and verify Content Reveal Widget is available.
 
 ## Next Steps
 

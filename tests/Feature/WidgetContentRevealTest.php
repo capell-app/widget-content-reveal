@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+
+use Capell\Core\Facades\CapellCore;
 use Capell\LayoutBuilder\Support\WidgetExtensions\WidgetExtensionRegistry;
 use Capell\WidgetContentReveal\Data\ContentRevealInputData;
 use Capell\WidgetContentReveal\Health\WidgetContentRevealHealthCheck;
@@ -8,6 +10,7 @@ use Capell\WidgetContentReveal\Providers\WidgetContentRevealServiceProvider;
 use Illuminate\Validation\ValidationException;
 
 beforeEach(function (): void {
+    CapellCore::forcePackageInstalled('capell-app/widget-content-reveal');
     $this->app->register(WidgetContentRevealServiceProvider::class);
 });
 it('registers all supported reveal behaviors', function (): void {
