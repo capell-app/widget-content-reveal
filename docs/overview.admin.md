@@ -4,7 +4,7 @@ Content Reveal lets editors introduce deeper content with up to 12 teaser cards.
 
 ## Do I need to do anything?
 
-Add **Content Reveal** in Layout Builder and enter its heading. Add one to 12 ordered teaser cards; each card needs a title, teaser, button label, and the UUID of its target widget instance. Choose how the target should open: **Modal**, **Slide-over**, **Inline reveal**, or **Replace region**. Preview the public page before publishing.
+Add **Content Reveal** in Layout Builder and enter its heading. Add one to 12 ordered teaser cards; each card needs a title, teaser, button label, and a named target widget from **Content to open**. Choose how the target should open: **Modal**, **Slide-over**, **Inline reveal**, or **Replace region**. Preview the public page before publishing.
 
 ## Where it shows up
 
@@ -19,3 +19,5 @@ Editors configure it as a Layout Builder widget that selects target widget insta
 ## Screenshot status
 
 Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control. The committed Marketplace card is interim beta artwork until these two fixture captures are recorded.
+
+**Content to open** lists registered widgets from the current page content field and language, excluding the widget being edited. It keeps stable identities internally, so reordering does not change the target. Targets in other pages, languages, or separate content fields are not offered. If a saved target is removed or unavailable, the authoring form asks you to select a replacement before publishing. The public page keeps the existing safe fallback without exposing the missing identity.
