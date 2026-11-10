@@ -2,83 +2,48 @@
 
 <!-- prettier-ignore-start -->
 
-## What This Plugin Adds
-
-Content Reveal Widget is an **Available**, **No schema impact** Capell package in the **Capell Foundation** product group. It ships as `capell-app/widget-content-reveal` and extends these surfaces: admin, frontend.
+## What It Does
 
 Content Reveal adds a Layout Builder widget that presents teaser cards and reveals registered widget snapshots in modal, slideover, inline, or replacement modes. Reveal targets stay within the widget registry.
 
+- **Price and availability:** Check current availability and price on the [Capell Marketplace listing](https://capell.app/extensions/widget-content-reveal).
+- **Licence:** Check the licence terms on the [Capell Marketplace listing](https://capell.app/extensions/widget-content-reveal).
+- **Requires:** `PHP ^8.4`, `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`, `spatie/laravel-package-tools ^1.0`.
+- **Install:** `composer require capell-app/widget-content-reveal`.
+
 Editors connect a teaser to another registered widget, and visitors can reveal that content without leaving the current public page.
 
-Status details:
-
-- Status: Available
-- Tier: free
-- Bundle: foundation
-- Composer package: `capell-app/widget-content-reveal`
-- Namespace: `Capell\WidgetContentReveal`
-- Theme key: not applicable
-
-## Why It Matters
+## Who It Is For
 
 **For developers:** The extension declares interaction support and a widget target capability through a typed definition rather than accepting arbitrary render targets.
 
 **For teams:** Teams can keep supporting material available on demand while preserving a concise first view of the page.
 
-## Screens And Workflow
+## Quick Start
 
-Screenshot contract: `docs/screenshots.json`.
+1. Install the package: `composer require capell-app/widget-content-reveal`.
+2. Open a page, click **Layout builder**, **Add widgets**, then choose **Content Reveal**.
+
+## Configure
+
+This extension works without configuration. There is nothing to set after install.
+
+## Limits And Pitfalls
+
+- Install the required Capell packages at the versions in `composer.json`: `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`.
+- Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
+- Custom write integrations must preserve invalidation for `widget-content-reveal` cache tags.
+
+## Screens And Workflow
 
 ![Content Reveal public output](docs/screenshots/content-reveal-public-output.png)
 
 ![Content Reveal fields in Layout Builder](docs/screenshots/content-reveal-layout-builder-editor.png)
 
-- Content Reveal Widget extension card (marketplace, supplementary documentation fixture).
-- Content Reveal fields in Layout Builder (admin, supplementary evidence).
-- Content Reveal public output (frontend, required evidence).
-- Content Reveal fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
-
-## Technical Shape
-
-### Service providers
-
-- `Capell\WidgetContentReveal\Providers\WidgetContentRevealServiceProvider`
-
-### Filament classes
-
-- `ContentRevealWidget`
-
-### Actions
-
-- `BuildRevealTargetOptionsAction`
-
-### Data objects
-
-- `ContentRevealInputData`
-- `ContentRevealRenderData`
-- `RevealCardData`
-
-### Manifest contributions
-
-- `asset: Capell\WidgetContentReveal\WidgetContentRevealContribution`
-- `content-widget: Capell\WidgetContentReveal\WidgetContentRevealContribution`
-
-### Health checks
-
-- `Capell\WidgetContentReveal\Health\WidgetContentRevealHealthCheck`
-
-### Blade views
-
-- `packages/widget-content-reveal/resources/views/widget.blade.php`
-
-### Cache tags
-
-- `widget-content-reveal`
-
-
-## Data Model
-
-This package has no schema impact. It extends Capell through `asset` contributions and `content-widget` contributions instead of declaring package-owned tables.
+- Content Reveal Widget extension card (marketplace).
+- Content Reveal fields in Layout Builder (admin).
+- Content Reveal public output (frontend).
+- Content Reveal fields in Layout Builder with admin sidebar menu open (admin).
 
 ## Install Impact
 
@@ -94,12 +59,6 @@ This package has no schema impact. It extends Capell through `asset` contributio
 - Cache tags: `widget-content-reveal`.
 - Commands: none declared.
 
-## Common Pitfalls
-
-- Keep required Capell packages on compatible v4 releases: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
-- Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
-- Custom write integrations must preserve invalidation for `widget-content-reveal` cache tags.
-
 ## Troubleshooting
 
 | Symptom | Likely cause | Check | Fix |
@@ -108,11 +67,6 @@ This package has no schema impact. It extends Capell through `asset` contributio
 | Public output leaks unexpected state | Render data, cache variation, or authoring boundary has regressed | Check public Blade, cache tags, and public-output safety tests | Move data loading out of Blade and rerun the package public-output tests |
 | The reveal is refused | It has no cards or more than 12, or the heading is over 120 characters | Count the cards and check the heading length | Keep between 1 and 12 cards |
 | A card is refused | The card has no target widget, or its behaviour is not modal, slide-over, inline reveal or replace region | Check the card's target and behaviour fields | Choose the widget the card should open and one of the listed behaviours |
-
-## Quick Start
-
-1. Install the package: `composer require capell-app/widget-content-reveal`.
-2. Open a page, click **Layout builder**, **Add widgets**, then choose **Content Reveal**.
 
 ## Upgrading
 
@@ -123,7 +77,7 @@ No manual steps between minor versions.
 - [Package docs](docs/README.md)
 - [Overview](docs/overview.md)
 - [Troubleshooting](#troubleshooting)
-- [Screenshot contract](docs/screenshots.json)
+- [Developer reference](docs/reference.md)
 - [Marketplace assets](docs/assets/marketplace/)
 - [Capell content language plan](../../docs/CONTENT_LANGUAGE_PLAN.md)
 - [Capell documentation design system](../../docs/DESIGN_SYSTEM.md)

@@ -12,7 +12,7 @@ Editors configure it as a Layout Builder widget that selects target widget insta
 
 ## Good to know
 
-- This free beta extension belongs to Capell Foundation and requires Layout Builder.
+- This free beta extension belongs to Capell Essentials and requires Layout Builder.
 - Target UUIDs are authoring data. A resolvable target becomes an interaction locator in public markup; raw model identifiers are not emitted.
 - Modal interactions support backdrop dismissal and expose loading, ready, error, retry, and standalone-fallback status text to assistive technology.
 

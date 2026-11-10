@@ -8,7 +8,7 @@
     "version": "1.0.0",
     "description": "Teaser cards reveal registered widget snapshots through accessible overlays, inline regions, or replacement regions.",
     "product": {
-        "group": "Capell Foundation",
+        "group": "Capell Essentials",
         "tier": "free",
         "bundle": "foundation"
     },
@@ -133,7 +133,34 @@
     },
     "marketplace": {
         "summary": "Reveal registered widgets through secure, accessible lazy interactions.",
+        "description": "Introduce deeper content with up to twelve teaser cards that open another widget from the same page in a modal, slide-over, inline region or replacement region. Requires Layout Builder. Limits: the target widget must be present on the same rendered page; when it is not, the card keeps its teaser and button but cannot open it.",
+        "problem": "Editors who want to offer more detail can send visitors away from the page to find it.",
+        "outcome": "A page has teasers that reveal registered widget content in place.",
+        "faq": [
+            {
+                "question": "Where can revealed content appear?",
+                "answer": "Editors can choose modal, slide-over, inline or replacement presentation."
+            },
+            {
+                "question": "Which content can a teaser open?",
+                "answer": "A teaser connects to another registered widget; targets stay within the widget registry."
+            },
+            {
+                "question": "How many reveal cards are allowed?",
+                "answer": "A reveal must contain between 1 and 12 cards."
+            }
+        ],
         "screenshots": [
+            {
+                "path": "docs/assets/marketplace/listing-content-reveal-public-output.png",
+                "alt": "Content Reveal public output",
+                "caption": "Content Reveal public output"
+            },
+            {
+                "path": "docs/assets/marketplace/listing-content-reveal-layout-builder-editor.png",
+                "alt": "Content Reveal fields in Layout Builder",
+                "caption": "Content Reveal fields in Layout Builder"
+            },
             {
                 "path": "docs/assets/marketplace/extension-card.jpg",
                 "alt": "Content Reveal widget preview",
