@@ -6,7 +6,7 @@
     "kind": "package",
     "capellApiVersion": "^1.0",
     "version": "1.0.0",
-    "description": "Teaser cards reveal registered widget snapshots through accessible overlays, inline regions, or replacement regions.",
+    "description": "Short cards with buttons that open another part of the same page in a pop-up or a panel that slides in from the side.",
     "product": {
         "group": "Capell Essentials",
         "tier": "free",
@@ -59,7 +59,7 @@
     },
     "settings": [],
     "permissions": [],
-    "capabilities": ["frontend.public-static", "frontend.interactive"],
+    "capabilities": ["frontend-surface"],
     "security": {
         "riskTier": "low",
         "publicSurface": {
@@ -132,41 +132,59 @@
         "privateDocsRequested": false
     },
     "marketplace": {
-        "summary": "Reveal registered widgets through secure, accessible lazy interactions.",
-        "description": "Introduce deeper content with up to twelve teaser cards that open another widget from the same page in a modal, slide-over, inline region or replacement region. Requires Layout Builder. Limits: the target widget must be present on the same rendered page; when it is not, the card keeps its teaser and button but cannot open it.",
-        "problem": "Editors who want to offer more detail can send visitors away from the page to find it.",
-        "outcome": "A page has teasers that reveal registered widget content in place.",
+        "summary": "Teaser cards that open your prices, team details or other parts of the same page on the spot, in a pop-up or side panel.",
+        "description": "Add up to twelve short cards to a page, each with a title, a line of teaser text and a button. The button opens another part of the same page, picked from a searchable list, in a pop-up or a panel sliding in from the side. Visitors close it and carry on from where they were. Cards keep pointing at the right part when you rearrange the page. A card can't reach a different page, and if the part it opens is removed, the card opens nothing. It needs Layout Builder to place it on a page.",
+        "problem": "Long pages make visitors give up before they reach prices, team details or the menu.",
+        "outcome": "Visitors scan short cards, open only the detail they want and carry on from the same place.",
         "faq": [
             {
-                "question": "Where can revealed content appear?",
-                "answer": "Editors can choose modal, slide-over, inline or replacement presentation."
+                "question": "What can a card open?",
+                "answer": "Something you have already built on the same page, such as a price list or a team section. A card cannot open content from a different page."
             },
             {
-                "question": "Which content can a teaser open?",
-                "answer": "A teaser connects to another registered widget; targets stay within the widget registry."
+                "question": "How does the content appear?",
+                "answer": "In a pop-up over the page or in a side panel, chosen card by card. Visitors close it and carry on from the same spot."
             },
             {
-                "question": "How many reveal cards are allowed?",
-                "answer": "A reveal must contain between 1 and 12 cards."
+                "question": "How many cards can one block hold?",
+                "answer": "Up to twelve, each with a title, a line of teaser text and a button label."
+            },
+            {
+                "question": "Do the cards break if I rearrange the page?",
+                "answer": "No. Each card is tied to the content it opens and not to where that content sits, so it keeps opening the right part after you move things around."
             }
         ],
         "screenshots": [
             {
                 "path": "docs/assets/marketplace/listing-content-reveal-public-output.png",
-                "alt": "Content Reveal public output",
-                "caption": "Content Reveal public output"
+                "alt": "Explore the studio heading, a Workshop attendance card with a See attendance link and a patterned bar chart below",
+                "caption": "A teaser card links to content already on the same page, here a chart."
             },
             {
                 "path": "docs/assets/marketplace/listing-content-reveal-layout-builder-editor.png",
-                "alt": "Content Reveal fields in Layout Builder",
-                "caption": "Content Reveal fields in Layout Builder"
+                "alt": "Page editor with a Content Reveal block open, showing a heading, card title, teaser, button label, target and Modal setting",
+                "caption": "Each card has a title, a teaser and a button label, plus a target and how it opens."
             },
             {
                 "path": "docs/assets/marketplace/extension-card.jpg",
-                "alt": "Content Reveal widget preview",
-                "caption": "Content Reveal widget"
+                "alt": "Marketplace card for the Content Reveal widget with a chart and an editor screen and the steps Install, Use and Evolve",
+                "caption": "Card used for the widget's Marketplace listing."
             }
         ],
         "categories": ["foundation", "frontend", "interactive"]
+    },
+    "contributionTraceability": {
+        "contributions": [
+            {
+                "type": "asset",
+                "key": "resource-group:capell-app.widget-content-reveal",
+                "providerBucket": "runtime"
+            },
+            {
+                "type": "content-widget",
+                "key": "capell-app.content-reveal",
+                "providerBucket": "runtime"
+            }
+        ]
     }
 }

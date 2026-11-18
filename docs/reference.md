@@ -6,7 +6,7 @@ Developer reference for `capell-app/widget-content-reveal`. Start with the [READ
 
 ## Package Details
 
-Content Reveal Widget is an **Available**, **No schema impact** Capell package in the **Capell Essentials** product group. It ships as `capell-app/widget-content-reveal` and extends these surfaces: admin, frontend.
+Content Reveal Widget is an **Available** Capell package in the **Capell Essentials** product group. It ships as `capell-app/widget-content-reveal` and extends these surfaces: admin, frontend.
 
 - Status: Available
 - Tier: free

@@ -1,6 +1,6 @@
 {
     "name": "capell-app/widget-content-reveal",
-    "description": "Secure nested content reveal widget for Capell.",
+    "description": "Teaser card widget for Capell pages whose buttons open another part of the same page in a pop-up or side panel. Needs Layout Builder.",
     "type": "library",
     "license": "proprietary",
     "require": {

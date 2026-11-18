@@ -2,27 +2,25 @@
 
 <!-- prettier-ignore-start -->
 
-## What It Does
+A visitor presses "See prices" on a short card, and your price list opens over the page in a pop-up or a panel that slides in from the side. They read it, close it and are back where they were. That helps on a long page, where the part someone came for can be a lot of scrolling away.
 
-Content Reveal adds a Layout Builder widget that presents teaser cards and reveals registered widget snapshots in modal, slideover, inline, or replacement modes. Reveal targets stay within the widget registry.
+The cards don't hold the detail themselves. Each one points at something you've already put on the same page, such as your price list or the piece about your team. Build that part of the page first and save it. Then add up to twelve cards, each with a title and a line of teaser text above its button.
+
+For every card you pick what it opens from a searchable list of the other parts of that page. You also choose whether it appears as a pop-up or slides in from the side. A card can't open anything from a different page. Rearrange the page later and every card still opens the right part.
 
 - **Price and availability:** Check current availability and price on the [Capell Marketplace listing](https://capell.app/extensions/widget-content-reveal).
 - **Licence:** Check the licence terms on the [Capell Marketplace listing](https://capell.app/extensions/widget-content-reveal).
 - **Requires:** `PHP ^8.4`, `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`, `spatie/laravel-package-tools ^1.0`.
 - **Install:** `composer require capell-app/widget-content-reveal`.
 
-Editors connect a teaser to another registered widget, and visitors can reveal that content without leaving the current public page.
-
-## Who It Is For
-
-**For developers:** The extension declares interaction support and a widget target capability through a typed definition rather than accepting arbitrary render targets.
-
-**For teams:** Teams can keep supporting material available on demand while preserving a concise first view of the page.
-
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-content-reveal`.
 2. Open a page, click **Layout builder**, **Add widgets**, then choose **Content Reveal**.
+
+## For Developers
+
+The extension declares interaction support and a widget target capability through a typed definition rather than accepting arbitrary render targets.
 
 ## Configure
 
@@ -65,8 +63,6 @@ This extension works without configuration. There is nothing to set after instal
 | --- | --- | --- | --- |
 | Package surface is missing after install | Provider or manifest is not loaded | Confirm `capell.json`, package `composer.json`, and provider registration | Reinstall the package, refresh Composer autoload, and clear host caches |
 | Public output leaks unexpected state | Render data, cache variation, or authoring boundary has regressed | Check public Blade, cache tags, and public-output safety tests | Move data loading out of Blade and rerun the package public-output tests |
-| The reveal is refused | It has no cards or more than 12, or the heading is over 120 characters | Count the cards and check the heading length | Keep between 1 and 12 cards |
-| A card is refused | The card has no target widget, or its behaviour is not modal, slide-over, inline reveal or replace region | Check the card's target and behaviour fields | Choose the widget the card should open and one of the listed behaviours |
 
 ## Upgrading
 

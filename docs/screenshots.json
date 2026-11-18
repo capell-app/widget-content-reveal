@@ -23,7 +23,7 @@
             "path": "docs/assets/marketplace/extension-card.svg",
             "fixtureKind": "illustrative-catalogue",
             "notes": "Committed Beta Marketplace card artwork for Content Reveal Widget.",
-            "useCase": "A buyer reviews the Beta extension card before enabling Content Reveal Widget."
+            "useCase": "The Content Reveal Widget extension card, marked Beta."
         },
         {
             "id": "content-reveal-layout-builder-editor",

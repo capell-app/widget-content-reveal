@@ -1,20 +1,4 @@
 {
-    "whatThisPluginAdds": {
-        "text": "Content Reveal adds a Layout Builder widget that presents teaser cards and reveals registered widget snapshots in modal, slideover, inline, or replacement modes. Reveal targets stay within the widget registry.",
-        "evidence": [
-            "src/Filament/ContentRevealWidget.php",
-            "resources/views/widget.blade.php",
-            "tests/Feature/WidgetContentRevealTest.php"
-        ]
-    },
-    "surfaceOutcome": {
-        "text": "Editors connect a teaser to another registered widget, and visitors can reveal that content without leaving the current public page.",
-        "evidence": [
-            "capell.json",
-            "resources/views/widget.blade.php",
-            "tests/Feature/WidgetContentRevealTest.php"
-        ]
-    },
     "whyItMatters": {
         "developers": {
             "text": "The extension declares interaction support and a widget target capability through a typed definition rather than accepting arbitrary render targets.",
@@ -23,29 +7,6 @@
                 "src/Filament/ContentRevealWidget.php",
                 "tests/Feature/WidgetContentRevealTest.php"
             ]
-        },
-        "teams": {
-            "text": "Teams can keep supporting material available on demand while preserving a concise first view of the page.",
-            "evidence": [
-                "resources/views/widget.blade.php",
-                "tests/Feature/WidgetContentRevealTest.php"
-            ]
         }
-    },
-    "troubleshooting": [
-        {
-            "symptom": "The reveal is refused",
-            "cause": "It has no cards or more than 12, or the heading is over 120 characters",
-            "check": "Count the cards and check the heading length",
-            "fix": "Keep between 1 and 12 cards",
-            "evidence": ["src/Data/ContentRevealInputData.php"]
-        },
-        {
-            "symptom": "A card is refused",
-            "cause": "The card has no target widget, or its behaviour is not modal, slide-over, inline reveal or replace region",
-            "check": "Check the card's target and behaviour fields",
-            "fix": "Choose the widget the card should open and one of the listed behaviours",
-            "evidence": ["src/Data/RevealCardData.php"]
-        }
-    ]
+    }
 }
