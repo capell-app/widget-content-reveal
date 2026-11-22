@@ -16,8 +16,4 @@ Editors configure it as a Layout Builder widget that selects target widget insta
 - Target UUIDs are authoring data. A resolvable target becomes an interaction locator in public markup; raw model identifiers are not emitted.
 - Modal interactions support backdrop dismissal and expose loading, ready, error, retry, and standalone-fallback status text to assistive technology.
 
-## Screenshot status
-
-Capture the configured teaser cards and a public reveal in its open state, including the keyboard-visible close control.
-
 **Content to open** lists registered widgets from the current page content field and language, excluding the widget being edited. It keeps stable identities internally, so reordering does not change the target. Targets in other pages, languages, or separate content fields are not offered. If a saved target is removed or unavailable, the authoring form asks you to select a replacement before publishing. The public page keeps the existing safe fallback without exposing the missing identity.

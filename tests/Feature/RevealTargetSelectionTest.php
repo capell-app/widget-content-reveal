@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 use Capell\Admin\Filament\Components\Forms\Editor\ContentBuilder;
+use Capell\Core\Data\Rendering\FrontendRuntimeManifestData;
+use Capell\Core\Enums\Rendering\RenderingStrategyEnum;
 use Capell\Core\Facades\CapellCore;
 use Capell\Frontend\Data\Assets\FrontendResourcePlanData;
-use Capell\Frontend\Data\FrontendRuntimeManifestData;
 use Capell\Frontend\Data\PublicPageRenderData;
-use Capell\Frontend\Enums\RenderingStrategyEnum;
 use Capell\WidgetContentReveal\Data\ContentRevealRenderData;
 use Capell\WidgetContentReveal\Filament\ContentRevealWidget;
 use Capell\WidgetContentReveal\Providers\WidgetContentRevealServiceProvider;
@@ -81,11 +81,6 @@ it('renders only prepared public target links and safely omits missing target id
     $targetId = (string) Str::uuid();
     $renderData = ContentRevealRenderData::from(['heading' => 'More', 'cards' => [['title' => 'Studio', 'teaser' => 'Visit', 'buttonLabel' => 'Open', 'targetInstanceId' => $targetId]]]);
     $pageData = new PublicPageRenderData(
-        page: null,
-        site: null,
-        language: null,
-        layout: null,
-        theme: null,
         layoutGraph: null,
         runtimeManifest: FrontendRuntimeManifestData::forRenderingStrategy(RenderingStrategyEnum::BladeOnly),
         resourcePlan: new FrontendResourcePlanData([], [], [], [], [], [], [], ''),

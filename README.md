@@ -8,14 +8,14 @@ The cards don't hold the detail themselves. Each one points at something you've 
 
 For every card you pick what it opens from a searchable list of the other parts of that page. You also choose whether it appears as a pop-up or slides in from the side. A card can't open anything from a different page. Rearrange the page later and every card still opens the right part.
 
-- **Price and availability:** Check current availability and price on the [Capell Marketplace listing](https://capell.app/extensions/widget-content-reveal).
-- **Licence:** Check the licence terms on the [Capell Marketplace listing](https://capell.app/extensions/widget-content-reveal).
-- **Requires:** `PHP ^8.4`, `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`, `spatie/laravel-package-tools ^1.0`.
-- **Install:** `composer require capell-app/widget-content-reveal`.
+- **Price and availability:** Check current availability and price on the [Capell Marketplace listing](https://capell.app/marketplace/extensions/widget-content-reveal).
+- **Licence:** Check the licence terms on the [Capell Marketplace listing](https://capell.app/marketplace/extensions/widget-content-reveal).
+- **Requires:** `PHP ^8.4`, `capell-app/admin ^1.0`, `capell-app/core ^1.0.79`, `capell-app/frontend ^1.0.79`, `capell-app/layout-builder ^1.0`, `spatie/laravel-package-tools ^1.0`.
+- **Install:** `composer require capell-app/widget-content-reveal:@beta`.
 
 ## Quick Start
 
-1. Install the package: `composer require capell-app/widget-content-reveal`.
+1. Install the package: `composer require capell-app/widget-content-reveal:@beta`.
 2. Open a page, click **Layout builder**, **Add widgets**, then choose **Content Reveal**.
 
 ## For Developers
@@ -28,7 +28,7 @@ This extension works without configuration. There is nothing to set after instal
 
 ## Limits And Pitfalls
 
-- Install the required Capell packages at the versions in `composer.json`: `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`.
+- Install the required Capell packages at the versions in `composer.json`: `capell-app/admin ^1.0`, `capell-app/core ^1.0.79`, `capell-app/frontend ^1.0.79`, `capell-app/layout-builder ^1.0`.
 - Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
 - Custom write integrations must preserve invalidation for `widget-content-reveal` cache tags.
 

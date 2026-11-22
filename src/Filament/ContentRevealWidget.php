@@ -29,7 +29,7 @@ final class ContentRevealWidget implements FilamentWidget
     #[Override]
     public static function make(): Block
     {
-        return Block::make(self::getWidgetName())->label(__('capell-widget-content-reveal::widget.label'))->schema([TextInput::make('heading')->required()->maxLength(120), Repeater::make('cards')->minItems(1)->maxItems(12)->reorderable()->schema([TextInput::make('title')->required()->maxLength(100), Textarea::make('teaser')->required()->maxLength(400), TextInput::make('buttonLabel')->required()->maxLength(80), self::targetSelect()->required(), Select::make('behavior')->options(RevealBehavior::class)->default(RevealBehavior::Modal->value)->required()])]);
+        return Block::make(self::getWidgetName())->label(__('capell-widget-content-reveal::widget.label'))->schema([TextInput::make('heading')->required()->maxLength(120), Repeater::make('cards')->minItems(1)->maxItems(12)->reorderable()->schema([TextInput::make('title')->required()->maxLength(100), Textarea::make('teaser')->required()->maxLength(400), TextInput::make('buttonLabel')->required()->maxLength(80), self::targetSelect()->required(), Select::make('behavior')->label(__('capell-widget-content-reveal::widget.behavior'))->options(RevealBehavior::class)->default(RevealBehavior::Modal->value)->required()])]);
     }
 
     private static function targetSelect(): Select
