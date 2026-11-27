@@ -6,6 +6,7 @@
     "kind": "package",
     "capellApiVersion": "^1.0",
     "version": "1.0.0",
+    "launchStatus": "preview",
     "description": "Short cards with buttons that open another part of the same page in a pop-up or a panel that slides in from the side.",
     "product": {
         "group": "Capell Essentials",
